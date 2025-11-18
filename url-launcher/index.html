@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Launcher</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>Location / URL Launcher</h1>
+    <div>
+        <input type="text" id="inputURL" placeholder="Enter URL">
+        <button onclick="openURL()">Open</button>
+    </div>
+    <script>
+        function openURL() {
+            let url = document.getElementById("inputURL").value.trim();
+            if (!url.startsWith("http://") && !url.startsWith("https://"))  {
+                url = "https://" + url;
+            }
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>

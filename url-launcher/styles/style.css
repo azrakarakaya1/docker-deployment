@@ -1,0 +1,45 @@
+body {
+    background: url("background.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.7rem;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.input-conteiner {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#inputURL {
+    width: 400px;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    background-color: rgb(242, 242, 242);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(224, 223, 255);
+}
