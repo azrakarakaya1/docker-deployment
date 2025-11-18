@@ -4,7 +4,10 @@ FROM nginx:stable-alpine
 # Default Nginx statik dosyalarını siler
 RUN rm -rf /usr/share/nginx/html/*
 
-# İki app i de Nginx'in html klasörüne kopyalar
+# Root için giriş sayfası
+COPY index.html /usr/share/nginx/html/index.html
+
+# İki app i de Nginx in html klasörüne kopyalar
 COPY url-launcher /usr/share/nginx/html/url-launcher
 COPY qr-generator /usr/share/nginx/html/qr-generator
 

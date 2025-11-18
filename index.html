@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Web Apps</title>
+  <style>
+    /* Reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #f5f6f8;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      text-align: center;
+      color: #0c1c31; /* softer blue */
+      margin-bottom: 50px;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #1a1a1a;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .app-section {
+      max-width: 800px;
+      width: 100%;
+      margin: 40px auto;
+      padding: 30px 40px;
+      background-color: #ffffff;
+      border-left: 4px solid #2c7be5; /* subtle accent line */
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .app-section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }
+
+    .app-section p {
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+
+    .links {
+      margin-top: 20px;
+    }
+
+    .links a {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      background-color: #5c8efb; /* soft blue */
+      padding: 12px 25px;
+      font-size: 1em;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      margin-right: 10px;
+    }
+
+    .links a:hover {
+      background-color: #3c6fe0; /* slightly darker on hover */
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; margin-bottom: 30px; }
+      h2 { font-size: 1.5em; }
+      .links a { font-size: 0.95em; padding: 10px 20px; margin-bottom: 10px; }
+      .app-section { padding: 20px; margin: 30px auto; }
+    }
+  </style>
+</head>
+<body>
+  <br>
+  <h1>Mini Web Apps</h1>
+
+  <!-- QR Generator Section -->
+  <div class="app-section">
+    <h2>QR Code Generator</h2>
+    <p>A simple and stylish web-based QR Code generator built using HTML, CSS, and JavaScript. Enter any text or URL to generate a scannable QR code.</p>
+    
+    <h3>Features:</h3>
+    <ul>
+      <li>Responsive, modern UI</li>
+      <li>QR Code generation using public API</li>
+      <li>Instant preview</li>
+      <li>Clean, user-friendly layout</li>
+    </ul>
+
+    <h3>Technologies:</h3>
+    <ul>
+      <li>HTML5, CSS3, JavaScript</li>
+      <li><a href="https://goqr.me/api/" target="_blank" rel="noopener noreferrer">GoQR API</a></li>
+    </ul>
+
+    <div class="links">
+      <a href="http://localhost:8080/qr-generator/" target="_blank" rel="noopener noreferrer">Open QR Generator</a>
+    </div>
+  </div>
+
+  <!-- URL Launcher Section -->
+  <div class="app-section">
+    <h2>URL Launcher</h2>
+    <p>A simple web-based tool to quickly open URLs in a new browser tab. Automatically adds "https://" if the prefix is missing.</p>
+
+    <h3>Features:</h3>
+    <ul>
+      <li>Minimalist interface</li>
+      <li>Prepends "https://" if missing</li>
+      <li>Opens URLs in a new tab</li>
+      <li>Responsive design</li>
+    </ul>
+
+    <h3>Technologies:</h3>
+    <ul>
+      <li>HTML5, CSS3, JavaScript (ES6)</li>
+    </ul>
+
+    <div class="links">
+      <a href="http://localhost:8080/url-launcher/" target="_blank" rel="noopener noreferrer">Open URL Launcher</a>
+    </div>
+  </div>
+</body>
+</html>
