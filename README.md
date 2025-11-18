@@ -2,7 +2,7 @@
 
 This project packages two lightweight static web applications — URL Launcher and QR Generator — into a single Dockerized Nginx server. A helper script (build.sh) automates building and running the container.
 
----
+
 
 ## Features
 
@@ -12,7 +12,6 @@ This project packages two lightweight static web applications — URL Launcher a
 - Clean, extendable structure
 - Lightweight image using nginx:stable-alpine
 
----
 
 ## Dockerfile Overview
 
@@ -24,20 +23,14 @@ The Dockerfile:
 - Exposes port 80
 - Runs Nginx in the foreground
 
-FROM nginx:stable-alpine
-RUN rm -rf /usr/share/nginx/html/*
-COPY url-launcher /usr/share/nginx/html/url-launcher
-COPY qr-generator /usr/share/nginx/html/qr-generator
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
-
----
 
 ## Running the Deployment
 
 Use the provided script:
 
+```bash
 ./build.sh
+```
 
 This will:
 
@@ -47,27 +40,29 @@ This will:
 - Run the container on port 8080
 - Display URLs to access the apps
 
----
+
 
 ## Accessing the Apps
 
-After running the script, open:
+After running the script, open: <strong>http://localhost:8080/</strong>
 
-URL Launcher:
-http://localhost:8080/url-launcher/
+- URL Launcher: http://localhost:8080/url-launcher/
 
-QR Generator:
-http://localhost:8080/qr-generator/
+- QR Generator: http://localhost:8080/qr-generator/
 
 ---
+
+### Stopping the Container
 
 ```bash
-# Stopping the Container
 docker stop docker-deployment-container
 docker rm docker-deployment-container
+```
 
----
 
-# Manual Build & Run
+### Manual Build & Run
+
+```bash
 docker build -t docker-deployment .
 docker run -d --name docker-deployment-container -p 8080:80 docker-deployment
+```
